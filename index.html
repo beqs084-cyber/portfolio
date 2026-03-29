@@ -78,7 +78,7 @@ section h2 {
     margin-bottom:30px;
 }
 
-/* USŁUGI */
+/* USŁUGI / GALERIA */
 .services {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
@@ -97,6 +97,20 @@ section h2 {
 
 .card:hover {
     transform:translateY(-5px);
+}
+
+.services img.card {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.services img.card:hover {
+    transform:scale(1.05);
 }
 
 /* KONTAKT */
@@ -126,6 +140,7 @@ section h2 {
     <h2>Amelia Madeja</h2>
     <div>
         <a href="#services">Usługi</a>
+        <a href="#gallery">Galeria</a>
         <a href="#contact">Kontakt</a>
     </div>
 </nav>
@@ -152,6 +167,16 @@ section h2 {
             <h3>𝑃𝐸𝐷𝐼𝐂𝑈𝑅𝐸</h3>
             <p>Kompleksowa pielęgnacja stóp i paznokci, poprawiająca ich wygląd i zdrowie.</p>
         </a>
+    </div>
+</section>
+
+<section id="gallery" class="fade">
+    <h2>Galeria</h2>
+    <div class="services">
+        <a href="praca1.jpg" target="_blank"><img src="praca1.jpg" alt="Stylizacja 1" class="card"></a>
+        <a href="praca2.jpg" target="_blank"><img src="praca2.jpg" alt="Stylizacja 2" class="card"></a>
+        <a href="praca3.jpg" target="_blank"><img src="praca3.jpg" alt="Stylizacja 3" class="card"></a>
+        <!-- Dodaj więcej zdjęć według potrzeby -->
     </div>
 </section>
 
