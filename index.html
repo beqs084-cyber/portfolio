@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amelia Madeja - Stylizacja Paznokci</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+
+body {
+    background:#fff0f6;
+    color:#333;
+}
+
+/* NAVBAR */
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    background:#fff;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+}
+
+nav h2 { color:#e75480; }
+nav a {
+    text-decoration:none;
+    color:#e75480;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+/* HERO */
+.hero {
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to bottom right, #ffe6f0, #fff);
+}
+
+.hero img {
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin-bottom:20px;
+    object-fit:cover;
+    border:4px solid #e75480;
+}
+
+.hero h1 { font-size:36px; color:#e75480; margin-bottom:10px; }
+.hero p { font-size:18px; margin-bottom:20px; }
+
+/* BUTTON */
+.btn {
+    padding:12px 25px;
+    border:none;
+    background:#e75480;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+/* SECTION */
+section {
+    padding:60px 40px;
+    max-width:900px;
+    margin:auto;
+}
+
+section h2 {
+    text-align:center;
+    color:#e75480;
+    margin-bottom:30px;
+}
+
+/* USŁUGI */
+.services {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.card {
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-decoration:none;
+    color:#333;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+}
+
+/* KONTAKT */
+.contact p {
+    text-align:center;
+    font-size:18px;
+    margin:10px 0;
+}
+
+/* ANIMACJE */
+.fade {
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+}
+
+.show {
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Amelia Madeja</h2>
+    <div>
+        <a href="#services">Usługi</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+</nav>
+
+<div class="hero fade">
+    <img src="https://i.imgur.com/2GB7sJH.jpg" alt="Amelia Madeja">
+    <h1>Amelia Madeja</h1>
+    <p>𝑆𝑇𝑌𝐿𝐼𝑍𝐴𝐶𝐽𝐴 𝐻𝑌𝐵𝑅𝑌𝐷𝑂𝑊𝐀 • 𝑆𝑇𝑌𝐿𝐼𝑍𝐴𝐶𝐽𝐴 Ż𝐸𝐿𝑂𝑊𝐀 • 𝑃𝐸𝐷𝐼𝐂𝑈𝑅𝐸</p>
+    <button class="btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Zobacz usługi</button>
+</div>
+
+<section id="services" class="fade">
+    <h2>Usługi</h2>
+    <div class="services">
+        <a href="https://booksy.com/pl-pl/170065_beauty-craft-mszana-dolna_salon-kosmetyczny_10713_mszana-dolna?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" class="card">
+            <h3>𝑆𝑇𝑌𝐿𝐼𝑍𝐴𝐶𝐽𝐴 𝐻𝑌𝐵𝑅𝑌𝐷𝑂𝑊𝐀</h3>
+            <p>Popularna metoda stylizacji paznokci, łącząca trwałość lakieru z łatwością aplikacji.</p>
+        </a>
+        <a href="https://booksy.com/pl-pl/170065_beauty-craft-mszana-dolna_salon-kosmetyczny_10713_mszana-dolna?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" class="card">
+            <h3>𝑆𝑇𝑌𝐿𝐼𝑍𝐴𝐶𝐽𝐴 Ż𝐸𝐿𝑂𝑊𝐀</h3>
+            <p>Metoda stylizacji paznokci polegająca na nałożeniu specjalnego żelu utwardzanego światłem UV lub LED.</p>
+        </a>
+        <a href="https://booksy.com/pl-pl/170065_beauty-craft-mszana-dolna_salon-kosmetyczny_10713_mszana-dolna?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" class="card">
+            <h3>𝑃𝐸𝐷𝐼𝐂𝑈𝑅𝐸</h3>
+            <p>Kompleksowa pielęgnacja stóp i paznokci, poprawiająca ich wygląd i zdrowie.</p>
+        </a>
+    </div>
+</section>
+
+<section id="contact" class="fade contact">
+    <h2>Kontakt</h2>
+    <p>Email: <a href="mailto:twójmail@gmail.com" style="color:#e75480;">twójmail@gmail.com</a></p>
+</section>
+
+<script>
+// Animacje przy scrollowaniu
+const elements = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if(pos < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+    });
+});
+
+// Animacja przy wczytaniu strony
+window.addEventListener('load', () => {
+    elements.forEach(el => el.classList.add('show'));
+});
+</script>
+
+</body>
+</html>
